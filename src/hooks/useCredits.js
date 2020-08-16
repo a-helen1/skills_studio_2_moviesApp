@@ -12,3 +12,4 @@ const useCredits = id => {
 };
 
 export default useCredits
+
