@@ -14,7 +14,7 @@ const MoviePage = props => {
 
   return (
   <>
-    {movie, credits? (
+    {movie && credits? (
       <>
         <PageTemplate movie={movie}  >
           <MovieDetails movie={movie} credits={credits} />

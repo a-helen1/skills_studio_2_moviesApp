@@ -8,7 +8,7 @@ Name: Andrew Helen
 
 ...... Insert a bullet-point list of user features. For extension to the Movies Fan app, only list new/modified features)...... 
  
- + Feature 1
+ + Feature 1 - Add actors to moviesDetails page
  + Feature 2
  + Feature 3
  + etc
@@ -20,11 +20,34 @@ Name: Andrew Helen
 
 ## API Data Model.
 
-..... [For projects that did not expand the Movies Fan app] Insert a diagram of API's data model (see example below) AND/OR a sample(s) of the JSON documents returned by its endpoints ........
+Feature- 1 Actors https://api.themoviedb.org/3/movie/${id}/credits?api_key=
 
-![][model]
+JSON example
 
-......[For projects that expanded the Movies Fan app] Specify the additional TMDB endpoints used and show sample responses, in JSON .........
+{
+  "id": 475557,
+  "cast": [
+    {
+      "cast_id": 357,
+      "character": "Arthur Fleck / Joker",
+      "credit_id": "5e8593bd98f1f10014aacb71",
+      "gender": 2,
+      "id": 73421,
+      "name": "Joaquin Phoenix",
+      "order": 0,
+      "profile_path": "/nXMzvVF6xR3OXOedozfOcoA20xh.jpg"
+    },
+    {
+      "cast_id": 16,
+      "character": "Murray Franklin",
+      "credit_id": "5b5242749251411f8600052d",
+      "gender": 2,
+      "id": 380,
+      "name": "Robert De Niro",
+      "order": 1,
+      "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+    },
+
 
 ## App Design.
 
