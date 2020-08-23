@@ -4,16 +4,20 @@ import MovieDetails from "../components/movieDetails";
 import PageTemplate from "../components/templateMoviePage";
 import MovieReviews from "../components/movieReviews";
 import useMovie from "../hooks/useMovie";
+import useCredits from "../hooks/useCredits";
+
 
 const MoviePage = props => {
   const { id } = props.match.params;
   const [movie] = useMovie(id);
+  const [credits] = useCredits(id);
+
   return (
   <>
-    {movie ? (
+    {movie && credits? (
       <>
-        <PageTemplate movie={movie}>
-          <MovieDetails movie={movie} />
+        <PageTemplate movie={movie}  >
+          <MovieDetails movie={movie} credits={credits} />
         </PageTemplate>
         <div className="row">
           <div className="col-12 ">

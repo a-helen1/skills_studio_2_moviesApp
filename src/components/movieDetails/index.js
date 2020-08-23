@@ -1,7 +1,8 @@
 import React from "react";
 import "./movieDetails.css";
+import { Link } from "react-router-dom";
 
-export default ({ movie }) => {
+export default ({ movie, credits }) => {
   return (
     <>
       <h4>Overview</h4>
@@ -20,7 +21,6 @@ export default ({ movie }) => {
           {movie.release_date}
         </li>
       </ul>
-
       <ul className="list-group list-group-horizontal">
         <li key="gh" className="list-group-item list-group-item-dark">
           Genres
@@ -59,8 +59,22 @@ export default ({ movie }) => {
               <li key={pco.name} className="list-group-item">
                   {pco.name}
               </li>
-          ))}            
+          ))}           
       </ul>
+      <ul className="list-group list-group-horizontal">
+          <li key="act" className="list-group-item list-group-item-dark">
+              Actors
+          </li>
+          <li className="d-flex flex-wrap">
+            {credits.cast.map(ac => (
+              <Link to={`/person/${ac.id}`}>
+                <li key={ac.name} className="list-group-item">
+                    {ac.name}
+                </li>
+              </Link>                              
+            ))} 
+          </li>        
+      </ul>   
     </>
   );
 };

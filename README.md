@@ -8,8 +8,8 @@ Name: Andrew Helen
 
 ...... Insert a bullet-point list of user features. For extension to the Movies Fan app, only list new/modified features)...... 
  
- + Feature 1
- + Feature 2
+ + Feature 1 - Add actors to moviesDetails page
+ + Feature 2 - Add Person details page, showing person image, biography etc. 
  + Feature 3
  + etc
  + etc
@@ -20,11 +20,56 @@ Name: Andrew Helen
 
 ## API Data Model.
 
-..... [For projects that did not expand the Movies Fan app] Insert a diagram of API's data model (see example below) AND/OR a sample(s) of the JSON documents returned by its endpoints ........
+Feature- 1 Actors https://api.themoviedb.org/3/movie/${id}/credits?api_key=
 
-![][model]
+JSON example
 
-......[For projects that expanded the Movies Fan app] Specify the additional TMDB endpoints used and show sample responses, in JSON .........
+{
+  "id": 475557,
+  "cast": [
+    {
+      "cast_id": 357,
+      "character": "Arthur Fleck / Joker",
+      "credit_id": "5e8593bd98f1f10014aacb71",
+      "gender": 2,
+      "id": 73421,
+      "name": "Joaquin Phoenix",
+      "order": 0,
+      "profile_path": "/nXMzvVF6xR3OXOedozfOcoA20xh.jpg"
+    },
+    {
+      "cast_id": 16,
+      "character": "Murray Franklin",
+      "credit_id": "5b5242749251411f8600052d",
+      "gender": 2,
+      "id": 380,
+      "name": "Robert De Niro",
+      "order": 1,
+      "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
+    },
+}
+
+Feature - 2 Person https://api.themoviedb.org/3/person/${id}?api_key=
+
+{
+  "birthday": null,
+  "known_for_department": "Acting",
+  "deathday": null,
+  "id": 2136319,
+  "name": "Kadrolsha Ona Carole",
+  "also_known_as": [],
+  "gender": 0,
+  "biography": "",
+  "popularity": 0.84,
+  "place_of_birth": null,
+  "profile_path": "/xRg7Tv3beUyIfuNOcit0hVQg6CE.jpg",
+  "adult": false,
+  "imdb_id": "",
+  "homepage": null
+}
+
+
+
 
 ## App Design.
 
@@ -45,11 +90,8 @@ Name: Andrew Helen
 
 ...... Insert a list of the routes supported by your app and state the associated view. If relevant, specify which of the routes require authentication, i.e. protected/private. For projects that expanded the Movies Fan app, only new routes should be listed ......... 
 
-+ /blogs - displays all published blogs.
-+ /blogs/:id (private) - detail view of a particular blog.
-+ /blogs/:id/comments (private) - detail view of a particular blog and its comments.
-+ etc.
-+ etc.
++ /person/:id - loads the person details page
+
 
 ## React feature set.
 
