@@ -5,19 +5,19 @@ export default({person}) => {
     return(
         <>
             <h4>Biography</h4>
-            <p>person.biography</p>
+            <p>{person.biography}</p>
             <ul className="list-group list-group-horizontal">
-                <li key="ruh" className="list-group-item list-group-item-dark">
-                    Runtime (min.)
+                <li key="db" className="list-group-item list-group-item-dark">
+                    Birthday
                 </li>
-                <li key="rut" className="list-group-item ">
-                    {movie.runtime}
+                <li key="dob" className="list-group-item ">
+                    {person.birthday}
                 </li>
-                <li key="rdh" className="list-group-item list-group-item-dark">
-                    Release Date
+                <li key="pop" className="list-group-item list-group-item-dark">
+                    Popularity
                 </li>
                 <li key="rdv" className="list-group-item ">
-                    {movie.release_date}
+                    {person.popularity}
                 </li>
             </ul>
 
