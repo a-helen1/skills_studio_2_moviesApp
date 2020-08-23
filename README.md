@@ -9,7 +9,7 @@ Name: Andrew Helen
 ...... Insert a bullet-point list of user features. For extension to the Movies Fan app, only list new/modified features)...... 
  
  + Feature 1 - Add actors to moviesDetails page
- + Feature 2
+ + Feature 2 - Add Person details page, showing person image, biography etc. 
  + Feature 3
  + etc
  + etc
@@ -47,6 +47,28 @@ JSON example
       "order": 1,
       "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
     },
+}
+
+Feature - 2 Person https://api.themoviedb.org/3/person/${id}?api_key=
+
+{
+  "birthday": null,
+  "known_for_department": "Acting",
+  "deathday": null,
+  "id": 2136319,
+  "name": "Kadrolsha Ona Carole",
+  "also_known_as": [],
+  "gender": 0,
+  "biography": "",
+  "popularity": 0.84,
+  "place_of_birth": null,
+  "profile_path": "/xRg7Tv3beUyIfuNOcit0hVQg6CE.jpg",
+  "adult": false,
+  "imdb_id": "",
+  "homepage": null
+}
+
+
 
 
 ## App Design.
@@ -68,11 +90,8 @@ JSON example
 
 ...... Insert a list of the routes supported by your app and state the associated view. If relevant, specify which of the routes require authentication, i.e. protected/private. For projects that expanded the Movies Fan app, only new routes should be listed ......... 
 
-+ /blogs - displays all published blogs.
-+ /blogs/:id (private) - detail view of a particular blog.
-+ /blogs/:id/comments (private) - detail view of a particular blog and its comments.
-+ etc.
-+ etc.
++ /person/:id - loads the person details page
+
 
 ## React feature set.
 

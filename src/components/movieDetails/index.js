@@ -1,5 +1,6 @@
 import React from "react";
 import "./movieDetails.css";
+import { Link } from "react-router-dom";
 
 export default ({ movie, credits }) => {
   return (
@@ -66,9 +67,11 @@ export default ({ movie, credits }) => {
           </li>
           <li className="d-flex flex-wrap">
             {credits.cast.map(ac => (
+              <Link to={`/person/${ac.id}`}>
                 <li key={ac.name} className="list-group-item">
                     {ac.name}
-                </li>              
+                </li>
+              </Link>                              
             ))} 
           </li>        
       </ul>   
