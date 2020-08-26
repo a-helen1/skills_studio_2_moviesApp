@@ -7,6 +7,7 @@ import MoviesHeader from "../src/components/headerMovieList";
 import MovieList from "../src/components/movieList";
 import MovieDetails from "../src/components/movieDetails";
 import MovieHeader from "../src/components/headerMovie";
+import PersonDetails from "../src/components/personDetails";
 import AddFavoriteButton from "../src/components/buttons/addToFavorites";
 import { MemoryRouter } from "react-router";
 import GenresContextProvider from "../src/contexts/genresContext";
@@ -90,7 +91,59 @@ const sample = {
   title: "Star Wars: The Last Jedi",
   video: false,
   vote_average: 7,
-  vote_count: 9692
+  vote_count: 9692,
+};
+
+const sampleCredit={
+  cast: [
+    {
+    cast_id: 12,
+    character: "The Protagonist",
+    credit_id: "5cab21a50e0a264c7df637a6",
+    gender: 2,
+    id: 1117313,
+    name: "John David Washington",
+    order: 0,
+    profile_path: "/27C77ni5XmlgkJVbomXPC4tHWVd.jpg"
+    },
+    {
+    cast_id: 13,
+    character: "Neil",
+    credit_id: "5cab21b70e0a264c80f63b9c",
+    gender: 2,
+    id: 11288,
+    name: "Robert Pattinson",
+    order: 1,
+    profile_path: "/7kdpjFRXKnbsogBqzeAgfzlRojx.jpg"
+    },
+    {
+    cast_id: 14,
+    character: "Kat",
+    credit_id: "5cab21c90e0a264c88f63209",
+    gender: 1,
+    id: 1133349,
+    name: "Elizabeth Debicki",
+    order: 2,
+    profile_path: "/sJxj44aKdY0pjSIgnxBgMWLrQmw.jpg"
+    }
+  ]
+};
+
+const samplePerson={
+birthday: "1996-09-02",
+known_for_department: "Acting",
+deathday: null,
+id: 148992,
+name: "Austin Abrams",
+also_known_as: [ ],
+gender: 2,
+biography: "Austin Abrams was born on September 2, 1996 in the USA. He is an actor, known for Gangster Squad (2013), The Kings of Summer (2013) and Ticking Clock (2011).",
+popularity: 3.882,
+place_of_birth: "Sarasota, Florida, USA",
+profile_path: "/9pSpSAk9NsYC5puqAVsmSK3OSeu.jpg",
+adult: false,
+imdb_id: "nm3641002",
+homepage: null
 };
 
 storiesOf("Home Page/MovieCard", module)
@@ -143,12 +196,20 @@ storiesOf("Home Page/MovieList", module)
     );
   });
 
-storiesOf("Movie Details Page/MovieDetails", module).add("default", () => (
-  <MovieDetails movie={sample} />
-));
+storiesOf("Movie Details Page/MovieDetails", module)
+.addDecorator(story => (
+  <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
+))
+  .add("default", () => 
+    <MovieDetails movie={sample} credits={sampleCredit} />);
 
 storiesOf("Movie Details Page/MovieHeader", module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
   ))
   .add("default", () => <MovieHeader movie={sample} />);
+
+storiesOf("Person Details Pafe/PersonDetails", module).add("default", () => (
+  <PersonDetails person={samplePerson} />
+))
+    
