@@ -200,7 +200,7 @@ storiesOf("Movie Details Page/MovieDetails", module)
 .addDecorator(story => (
   <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
 ))
-  .add("default", () => 
+ .add("default", () => 
     <MovieDetails movie={sample} credits={sampleCredit} />);
 
 storiesOf("Movie Details Page/MovieHeader", module)
