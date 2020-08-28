@@ -13,7 +13,7 @@ Add actors to the movie details page. Create a page to show movies currently pla
  + Feature 2 - Add Person details page, showing person image, biography etc. 
  + Feature 3 - Update stories to include person details page
  + Feature 4 - Add page to show movies showing now using context. 
- + etc
+ + Feature 5 - Deploy to netlify - https://cocky-easley-075bce.netlify.app
 
 ## Setup requirements.
 
