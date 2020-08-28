@@ -3,20 +3,21 @@
 Name: Andrew Helen
 
 ## Overview.
-...... Insert a statement of the app concept and objectives. For an expansion of the Movies Fan app, only state the additional objectives .........
+
+Add actors to the movie details page. Create a page to show movies currently playing locally. Update storybook. 
 
 
 ...... Insert a bullet-point list of user features. For extension to the Movies Fan app, only list new/modified features)...... 
  
  + Feature 1 - Add actors to moviesDetails page
  + Feature 2 - Add Person details page, showing person image, biography etc. 
- + Feature 3
- + etc
+ + Feature 3 - Update stories to include person details page
+ + Feature 4 - Add page to show movies showing now using context. 
  + etc
 
 ## Setup requirements.
 
-...... Insert a brief explanation (to a third party) of any non-standard setup steps necessary to run your app/client locally (after cloning the repo) ........
+Add a .env file to root containing tmdb api key variable as "REACT_APP_TMDB_KEY={API Key}"
 
 ## API Data Model.
 
@@ -69,7 +70,27 @@ Feature - 2 Person https://api.themoviedb.org/3/person/${id}?api_key=
 }
 
 
+Feature - 4 Now Playing GET/movie/now_playing
 
+ {
+      "popularity": 56.723,
+      "vote_count": 69,
+      "video": false,
+      "poster_path": "/7I8BmtqjLyyMf3EjrUEIQs0gFYw.jpg",
+      "id": 625568,
+      "adult": false,
+      "backdrop_path": "/e7bpDu3RKsjOYLSt9gHYT2c32Zd.jpg",
+      "original_language": "en",
+      "original_title": "Unhinged",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "title": "Unhinged",
+      "vote_average": 6.3,
+      "overview": "A case of road rage turns into full-blown terror when an unstable driver follows a woman and her son.",
+      "release_date": "2020-07-31"
+    },
 
 ## App Design.
 
@@ -88,20 +109,16 @@ Feature - 2 Person https://api.themoviedb.org/3/person/${id}?api_key=
 
 ### Routing.
 
-...... Insert a list of the routes supported by your app and state the associated view. If relevant, specify which of the routes require authentication, i.e. protected/private. For projects that expanded the Movies Fan app, only new routes should be listed ......... 
-
 + /person/:id - loads the person details page
++ /nowPlaying - loads a list of movies currently playing
 
 
 ## React feature set.
 
 ..... Insert a bullet-point list of the React features used in your project, including one source code file references for each - see examples below ......
 
-+ useState and useEffect hooks - src/components/fileA.js
-+ useContext hook - src/components/fileb.js
-+ Extended Link - src/components/fileA.js
-+ Programmatic navigation - src/pages/fileC.js
-+ etc
++ useState and useEffect hooks - src/contexts/nowPlayingContext.js
++ custom hook src/hooks/useCredits.js
 + etc
 + etc
 
