@@ -124,9 +124,4 @@ Feature - 4 Now Playing GET/movie/now_playing
 
 ## Independent learning.
 
-. . . . . Briefly state the technologies/techniques used in your project codebase that were not covered in the lectures/labs. Provide source code filename references to support your assertions and include source material references (articles/blogs) ......... 
-
-
-[model]: ./data.jpg
-[view]: ./view.png
-[stories]: ./storybook.png
+App deployed to netlifly @ https://cocky-easley-075bce.netlify.app
