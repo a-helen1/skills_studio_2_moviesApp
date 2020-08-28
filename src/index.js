@@ -10,7 +10,8 @@ import SiteHeader from './components/siteHeader'
 import MoviesContextProvider from "./contexts/moviesContext";
 import GenresContextProvider from "./contexts/genresContext";
 import AddMovieReviewPage from './pages/addMovieReviewPage';
-import PersonPage from './pages/personDetailsPage'
+import PersonPage from './pages/personDetailsPage';
+import NowPlayingPage from './pages/nowPlayingPage'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
                 <Route exact path="/movies/favorites" component={FavouriteMoviesPage} />
                 <Route path="/movies/:id" component={MoviePage} />
                 <Route path="/person/:id" component={PersonPage} />
+                <Route path="/nowPlaying" component={NowPlayingPage} />
                 <Route path="/" component={HomePage} />
                 <Redirect from="*" to="/" />
               </Switch>
