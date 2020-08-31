@@ -97,7 +97,7 @@ Feature - 4 Now Playing GET/movie/now_playing
 ### Component catalogue.
 
 
-![Screenshot][./storybook.PNG]
+![][./storybook.PNG]
 
 ### UI Design.
 
