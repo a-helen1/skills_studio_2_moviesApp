@@ -96,9 +96,8 @@ Feature - 4 Now Playing GET/movie/now_playing
 
 ### Component catalogue.
 
-....... Insert a screenshot from the Storybook UI showing your components' stories. [For projects that expanded the Movies app, hi-light stories relating to new/modified components - see example screenshot below] .......
 
-![][stories]
+![Screenshot][storybook.png]
 
 ### UI Design.
 
@@ -115,7 +114,6 @@ Feature - 4 Now Playing GET/movie/now_playing
 
 ## React feature set.
 
-..... Insert a bullet-point list of the React features used in your project, including one source code file references for each - see examples below ......
 
 + useState and useEffect hooks - src/contexts/nowPlayingContext.js
 + custom hook src/hooks/useCredits.js
