@@ -96,15 +96,21 @@ Feature - 4 Now Playing GET/movie/now_playing
 
 ### Component catalogue.
 
-![alt text][storybook.PNG]
+![test image1](/storybook.PNG)
 
 ### UI Design.
 
-...... Insert screenshots of the app's views (see example below) with appropriate captions (For extension to the Movies Fan App, only show the new/modified views) ........
+Add actor links to movie details page. 
 
-![][view]
->Shows detailed information on a movie. Clicking the 'Show Reviews' button will display extracts from critic reviews.
+![test image2](/movie_details.PNG)
 
+Actor details page
+
+![test image3](/personDetails.PNG)
+
+Now playing link
+
+![test image4](/nowPlaying.PNG)
 ### Routing.
 
 + /person/:id - loads the person details page
