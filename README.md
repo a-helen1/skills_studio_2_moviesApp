@@ -5,9 +5,6 @@ Name: Andrew Helen
 ## Overview.
 
 Add actors to the movie details page. Create a page to show movies currently playing locally. Update storybook. 
-
-
-...... Insert a bullet-point list of user features. For extension to the Movies Fan app, only list new/modified features)...... 
  
  + Feature 1 - Add actors to moviesDetails page
  + Feature 2 - Add Person details page, showing person image, biography etc. 
@@ -25,6 +22,7 @@ Feature- 1 Actors https://api.themoviedb.org/3/movie/${id}/credits?api_key=
 
 JSON example
 
+```yaml
 {
   "id": 475557,
   "cast": [
@@ -49,9 +47,11 @@ JSON example
       "profile_path": "/cT8htcckIuyI1Lqwt1CvD02ynTh.jpg"
     },
 }
+```
 
 Feature - 2 Person https://api.themoviedb.org/3/person/${id}?api_key=
 
+```yaml
 {
   "birthday": null,
   "known_for_department": "Acting",
@@ -68,10 +68,11 @@ Feature - 2 Person https://api.themoviedb.org/3/person/${id}?api_key=
   "imdb_id": "",
   "homepage": null
 }
-
+```
 
 Feature - 4 Now Playing GET/movie/now_playing
 
+```yaml
  {
       "popularity": 56.723,
       "vote_count": 69,
@@ -91,6 +92,7 @@ Feature - 4 Now Playing GET/movie/now_playing
       "overview": "A case of road rage turns into full-blown terror when an unstable driver follows a woman and her son.",
       "release_date": "2020-07-31"
     },
+```  
 
 ## App Design.
 
